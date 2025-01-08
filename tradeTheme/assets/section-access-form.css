@@ -1,0 +1,32 @@
+.form-container {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius : 15px;
+    color : black;
+}
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .phone-group {
+    display: flex;
+  }
+  
+  .phone-group select {
+    width: 30%;
+  }
+  
+  button {
+    background: black;
+    color: white;
+    width: 100%;
+    padding: 10px;
+  }
+  

@@ -1,0 +1,109 @@
+{% comment %}
+  sections/progress-steps.liquid
+{% endcomment %}
+
+<div class="z-5 bg-oliveGreen flex p-[5vh]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-white text-center text-3xl md:text-[28px] mb-12 font-semibold">
+      {{ section.settings.heading | default: 'Access the demo store in 3 easy steps' }}
+    </h2>
+    
+    <div class="flex justify-between -mr-[200px]">
+      {% for block in section.blocks %}
+        <div class="flex flex-col justify-between w-full {% unless forloop.last %}{% endunless %}">
+          <!-- Step Number and Title -->
+          <div class="text-white mb-4">
+            <div class="flex gap-2 -ml-29 max-w-[160px]">
+              <span class="font-bold text-white text-[12px]">0{{ forloop.index }}</span>
+              <span class="md:block text-gray-300 font-semibold text-[12px]">{{ block.settings.title }}</span>
+            </div>
+          </div>
+          
+          <!-- Progress Indicator -->
+          <div class="flex items-center w-100vw gap-2">
+            <!-- Circle -->
+            <div class="relative z-10 w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center
+              {% if block.settings.current %}
+                border-4 border-limeCircles border-dashed text-limeCircles
+              {% elsif block.settings.completed %}
+                bg-limeCircles text-white
+              {% else %}
+                border-2 border-limeCircles text-limeCircles
+              {% endif %}">
+              {% if block.settings.completed %}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                </svg>
+              {% endif %}
+            </div>
+            
+            <!-- Connector Line -->
+            {% unless forloop.last %}
+              <div class="h-1 flex-grow border-t-4 border-lime-400 border-dashed">
+              </div>
+            {% endunless %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Progress Steps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Access the demo store in 3 easy steps"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Step Title"
+        },
+        {
+            "type":"checkbox",
+            "id":"completed",
+            "label":"Completed status",
+            "default":true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Progress Steps",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Submit your details"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Check your email for your one-time "
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Sign in to the demo store with your code" 
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
