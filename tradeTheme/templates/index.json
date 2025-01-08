@@ -145,8 +145,8 @@
   },
   "order": [
     "image_banner",
-    "featured_collection1",
     "steps",
+    "featured_collection1",
     "collection_list"
   ]
 }
