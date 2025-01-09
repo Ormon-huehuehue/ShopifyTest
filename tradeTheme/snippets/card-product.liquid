@@ -40,9 +40,10 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper underline-links-hover ">
     <div
       class="
+      
         card card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
@@ -106,7 +107,7 @@
             </div>
           </div>
         {%- endif -%}
-        <div class="card__content">
+        <div class="card__content ">
           <div class="card__information">
             <h3
               class="card__heading"
@@ -462,7 +463,7 @@
                   </button>
                   <div
                     id="QuickAddInfo-{{ card_product.id }}"
-                    class="quick-add-modal__content-info quick-add-modal__content-info--bulk"
+                    class="quick-add-modal__content-info quick-add-modal__content-info--bulk "
                   >
                     <div class="quick-add__content-info__media">
                       <div class="quick-add__info">
@@ -470,7 +471,7 @@
                           <div
                             class="quick-add__product-media"
                           >
-                            <div class="quick-add__product-container global-media-settings">
+                            <div class="quick-add__product-container global-media-settings ">
                               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
                               <img
                                 srcset="
