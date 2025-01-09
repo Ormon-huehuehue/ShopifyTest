@@ -1,29 +1,29 @@
 {{ 'section-access-form.css' | asset_url | stylesheet_tag }}
 
 
-<div class = "form-container page-width text-[12px]">
-    <h2 class="text-xl text-black">Get access to the demo store</h2>
-    <p>Our self-serve portal instantly creates a personalized demo store with just a few details</p>
+<div class = "bg-beigish rounded-3xl flex flex-col max-w-[400px] text-black py-8 px-5 text-[12px]">
+    <h2 class="text-[16px] text-black text-center font-semibold ">Get access to the demo store</h2>
+    <p class = ' pb-4 pt-3 text-center px-5'>Our self-serve portal instantly creates a personalized demo store with just a few details</p>
 
     {% form 'customer' %}
-        <input type = "text" name="customer[first_name]" placeholder="First Name" required/>
-        <input type="text" name="customer[last_name]" placeholder="Last name" required>
-        <input type="email" name="customer[email]" placeholder="Business Email" required>
+        <input class="border-[1px] rounded-md border-grayText text-grayText" type = "text" name="customer[first_name]" placeholder="First Name" required/>
+        <input class="border-[1px] rounded-md border-grayText text-grayText" type="text" name="customer[last_name]" placeholder="Last name" required>
+        <input class="border-[1px] rounded-md border-grayText text-grayText" type="email" name="customer[email]" placeholder="Business Email" required>
 
         <div class = "phone group">
-            <select name = "customer[country_code]">
+            <select class="border-[1px] rounded-md border-grayText text-grayText" name = "customer[country_code]">
                 <option value="+1">🇺🇸 +1</option>
                 <option value="+91">🇮🇳 +91</option>
                 <option value="+44">🇬🇧 +44</option>
             </select>
-            <input type="tel" name="customer[phone]" placeholder="Business Phone">
+            <input class="border-[1px] rounded-md border-grayText text-grayText" type="tel" name="customer[phone]" placeholder="Business Phone">
         </div>
 
-        <input type="text" name="contact[company]" placeholder="Company">
-        <input type="url" name="contact[website]" placeholder="Website URL">
+        <input class="border-[1px] rounded-md border-grayText text-grayText" type="text" name="contact[company]" placeholder="Company">
+        <input class="border-[1px] rounded-md border-grayText text-grayText" type="url" name="contact[website]" placeholder="Website URL">
 
 
-        <select name="contact[country]">
+        <select  class="border-[1px] rounded-md border-grayText text-grayText" name="contact[country]">
             <option value="">Country</option>
             <option value="US">United States</option>
             <option value="IN">India</option>
@@ -32,7 +32,7 @@
 
         <button type="submit" class="rounded-lg"> SUBMIT</button>
 
-        <p class = "text-[10px] pt-3 ">
+        <p class = "text-[9px] pt-3 text-center ">
             By submitting this form, you agree to receive promotional messages from Shopify 
             <strong>and the partners that provide these resources</strong> about its products and services. 
             You can unsubscribe at any time by clicking on the link at the bottom of our emails.

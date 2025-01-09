@@ -1,4 +1,12 @@
-
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "image_banner": {
@@ -13,7 +21,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Unlock the full B2B demo store"
+            "heading": "The Most Natural Looking Coloured Lenses"
           }
         }
       },
@@ -32,21 +40,21 @@
         "step_1": {
           "type": "step",
           "settings": {
-            "title": "Submit your details",
+            "title": "Place the lens on your fingertip, ensuring the edge is perfectly upright.",
             "completed": true
           }
         },
         "step_2": {
           "type": "step",
           "settings": {
-            "title": "Check your email for your one-time code",
+            "title": "Hold your eye open with your free hand and gently place the lens on your cornea.",
             "completed": false
           }
         },
         "step_3": {
           "type": "step",
           "settings": {
-            "title": "Sign in to the demo store with your code",
+            "title": "Blink slowly and look around to settle the lens.",
             "completed": false
           }
         }
@@ -57,7 +65,7 @@
         "step_3"
       ],
       "settings": {
-        "heading": "Access the demo store in 3 easy steps"
+        "heading": "Pop, Place, Blink – You're Ready to Go!"
       }
     },
     "featured_collection1": {
@@ -94,31 +102,25 @@
         "featured_collection1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "blue-lenses"
           }
         },
         "featured_collection2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "brown-lenses"
           }
         },
         "featured_collection3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "green-lenses"
           }
         },
         "featured_collection4": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
-          }
-        },
-        "featured_collection5": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": ""
+            "collection": "grey-lenses"
           }
         }
       },
@@ -126,14 +128,13 @@
         "featured_collection1",
         "featured_collection2",
         "featured_collection3",
-        "featured_collection4",
-        "featured_collection5"
+        "featured_collection4"
       ],
       "settings": {
         "title": "Shop our top categories",
         "heading_size": "h2",
         "image_ratio": "square",
-        "columns_desktop": 5,
+        "columns_desktop": 4,
         "color_scheme": "scheme-4",
         "show_view_all": false,
         "columns_mobile": "1",
@@ -141,12 +142,17 @@
         "padding_top": 48,
         "padding_bottom": 60
       }
+    },
+    "custom-footer": {
+      "type": "custom-footer",
+      "settings": {}
     }
   },
   "order": [
     "image_banner",
     "steps",
     "featured_collection1",
-    "collection_list"
+    "collection_list",
+    "custom-footer"
   ]
 }

@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       colors:{
         limeCircles : "#cdf986",
-        oliveGreen : "#182018"
+        oliveGreen : "#182018",
+        lightGreen : "#f0fbcc",
+        beigish : "#fffff6",
+        grayText : "#8f8f8f"
       }
     },
   },
