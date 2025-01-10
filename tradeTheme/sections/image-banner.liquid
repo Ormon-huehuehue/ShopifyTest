@@ -69,17 +69,17 @@
   style="background-image: url(https://images.pexels.com/photos/879178/pexels-photo-879178.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"
 >  
 
-  <div class="relative flex flex-col md:flex-row px-[30px] items-center justify-around w-full h-full md:py-6 py-8 z-10">
-    <div class="flex flex-col gap-4  max-w-3xl text-white">
+  <div class="relative flex flex-col lg:flex-row px-[10vw] items-center justify-around w-full h-full md:py-6 py-8 z-10">
+    <div class="flex flex-col gap-4 w-auto px-10 text-white">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h1 class="text-white font-bold text-6xl text-center md:text-start" {{ block.shopify_attributes }}>
+            <h1 class="text-white font-bold text-6xl text-center lg:text-start" {{ block.shopify_attributes }}>
               {{ block.settings.heading }}
             </h1>
-            <p class="py-5 text-gray-200 text-center md:text-start">{{section.settings.caption_text}}</p>
+            <p class="py-5 text-gray-200 text-center lg:text-start">{{section.settings.caption_text}}</p>
           {%- when 'text' -%}
-            <div class="text-md text-center md:text-start" {{ block.shopify_attributes }}>
+            <div class="text-md text-center lg:text-start" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
         {%- endcase -%}
@@ -87,7 +87,7 @@
     </div>
 
     <!-- Form Container -->
-    <div class="rounded-lg shadow-lg">
+    <div class="rounded-lg shadow-lg mb-10">
       {% render 'access-form' %}
     </div>  
   </div>
