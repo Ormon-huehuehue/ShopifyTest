@@ -65,21 +65,21 @@
 
 <div 
   id="Banner-{{ section.id }}"
-  class="relative w-screen h-screen overflow-hidden bg-cover bg-center bg-no-repeat"
+  class="relative w-screen md:h-screen h-auto overflow-hidden bg-cover bg-center bg-no-repeat"
   style="background-image: url(https://images.pexels.com/photos/879178/pexels-photo-879178.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"
 >  
 
-  <div class="relative flex items-center justify-around w-full h-full p-6 z-10">
-    <div class="flex flex-col gap-4 max-w-xl text-white">
+  <div class="relative flex flex-col md:flex-row px-[30px] items-center justify-around w-full h-full md:py-6 py-8 z-10">
+    <div class="flex flex-col gap-4  max-w-3xl text-white">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h1 class="text-white font-bold text-6xl" {{ block.shopify_attributes }}>
+            <h1 class="text-white font-bold text-6xl text-center md:text-start" {{ block.shopify_attributes }}>
               {{ block.settings.heading }}
             </h1>
-            <p class="py-5 text-gray-200">Register to experience the power of personalized storefronts, self-serve purchasing, and automated workflows.</p>
+            <p class="py-5 text-gray-200 text-center md:text-start">{{section.settings.caption_text}}</p>
           {%- when 'text' -%}
-            <div class="text-lg" {{ block.shopify_attributes }}>
+            <div class="text-md text-center md:text-start" {{ block.shopify_attributes }}>
               <p>{{ block.settings.text }}</p>
             </div>
         {%- endcase -%}
@@ -103,6 +103,21 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "text",
+      "id": "caption_text",
+      "label": "Caption",
+      "default": "Caption text"
+    },
+    {
+      "type": "range",
+      "id": "caption_size",
+      "label": "Caption size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "default": 16
+    },
     {
       "type": "range",
       "id": "image_overlay_opacity",
@@ -165,28 +180,7 @@
           "label": "t:sections.image-banner.blocks.text.settings.text.label"
         }
       ]
-    },
-    {
-      "type": "caption",
-      "name": "Caption",
-      "settings": [
-        {
-          "type": "text",
-          "id": "caption_text",
-          "label": "Caption",
-          "default": "Caption text"
-        },
-        {
-          "type": "range",
-          "id": "caption_size",
-          "label": "Caption size",
-          "min": 12,
-          "max": 24,
-          "step": 1,
-          "default": 16
-        }
-      ]
-    }
+    } 
   ],
   "presets": [
     {
@@ -197,9 +191,6 @@
         },
         {
           "type": "text"
-        },
-        {
-          "type": "caption"
         }
       ]
     }

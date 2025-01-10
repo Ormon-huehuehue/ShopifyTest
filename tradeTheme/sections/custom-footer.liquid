@@ -2,15 +2,36 @@
 <div style="background-image: url(https://images.pexels.com/photos/2558823/pexels-photo-2558823.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"
  class="flex flex-col relative object-cover h-auto w-screen bg-cover bg-center gap-7">
     <div class = 'flex justify-center items-center pt-[100px]'>
-        <h1 class = 'text-white font-bold space-x-[20px]'> SAY IT WITH YOUR EYES </h1>
+        <h1 class = 'text-white font-bold space-x-[20px]'> {{section.settings.heading}} </h1>
     </div>
-    <div class="w-full flex justify-center pb-[100px]">
-        <button class="bg-limeCircles border-2 border-gray-800  text-black rounded-full justify-center items-center w-[10%]">
-            LENS UP
+    <div class="w-auto flex justify-center pb-[100px]">
+        <button class="bg-limeCircles bg-opacity-80 border-2 border-gray-800  text-black rounded-full justify-center items-center w-auto px-10">
+            {{section.settings.button_text}}
         </button>
     </div>
 
 </div>
 
 
-<div style="background-image: url(https://images.pexels.com/photos/879178/pexels-photo-879178.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);"
+
+{% schema  %}
+{
+    "name":"custom footer",
+    "settings":[
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "heading",
+            "default": "SAY IT WITH YOUR EYES"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "button_text",
+            "default": "LENS UP"
+        }
+    ]
+}
+
+
+{% endschema %}

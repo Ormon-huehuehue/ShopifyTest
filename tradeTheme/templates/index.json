@@ -68,34 +68,6 @@
         "heading": "Pop, Place, Blink – You're Ready to Go!"
       }
     },
-    "featured_collection1": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Proven bestsellers",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "bulk",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 52
-      }
-    },
     "collection_list": {
       "type": "collection-list",
       "blocks": {
@@ -133,9 +105,9 @@
       "settings": {
         "title": "Shop our top categories",
         "heading_size": "h2",
-        "image_ratio": "square",
+        "image_ratio": "adapt",
         "columns_desktop": 4,
-        "color_scheme": "scheme-4",
+        "color_scheme": "scheme-1",
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
@@ -145,13 +117,12 @@
     },
     "custom-footer": {
       "type": "custom-footer",
-      "settings": {}
+     
     }
   },
   "order": [
     "image_banner",
     "steps",
-    "featured_collection1",
     "collection_list",
     "custom-footer"
   ]
